@@ -138,8 +138,12 @@ Or put this in your `.rspec` configuration file:
 
 ### Plain rspec
 
-It will work with plain rspec too:
+If you want to use steps outside of the Capybara features add this to your RSpec setup:
+````ruby
+RSpec.configuration.include Cardoon::StepsMethods
+```
 
+Then you can write a spec like that:
 ```ruby
 describe "Fixnum#+" do
   it 'adds two fixnums' do
