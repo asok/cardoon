@@ -159,10 +159,6 @@ end
   * [rspec-given](https://github.com/jimweirich/rspec-given)
   * [rspec-steps](https://github.com/LRDesign/rspec-steps)
 
-## Ideas
-  * `Steps` formatter inherits from rspec's `DocumentationFormatter`. Might we worth investigating some other approach to
-  obtain better output
-
 ## Contributing
 
 1. Fork it
