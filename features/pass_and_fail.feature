@@ -61,11 +61,6 @@ Scenario: Printing steps of an example that failed
       I cannot divide a Fixnum by 0 (FAILED - 1)
         Given I set x to 1
         When I try to divide x by 0
-          Failure/Error: @x/0
-          ZeroDivisionError:
-            divided by 0
-          # ./fixnum_spec.rb:9:in `/'
-          # ./fixnum_spec.rb:9:in `block (3 levels) in <top (required)>'
     """
   And the output should not contain:
   """

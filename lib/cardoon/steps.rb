@@ -39,17 +39,6 @@ module Cardoon
       else
         output.puts red(message)
       end
-
-      def long_padding #todo: a dirty hack!
-        short_padding * (@group_level + 2)
-      end
-      unless pending_fixed?(example) #fixed pendings will be printed at the end of the run
-        dump_failure_info(example)
-        dump_backtrace(example)
-      end
-      def long_padding
-        super
-      end
     end
 
     def example_group_started(example_group)
