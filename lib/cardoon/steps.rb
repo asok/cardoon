@@ -22,7 +22,7 @@ module Cardoon
       example_steps = @steps.delete(example)
       if example_steps
         output.puts message
-        output_steps(example_steps, :green)
+        output_steps(example_steps, :success_color)
       else
         output.puts green(message)
       end
@@ -34,8 +34,8 @@ module Cardoon
       message = "#{description_output(example)} (FAILED - #{next_failure_index})"
       if example_steps = @steps.delete(example)
         output.puts message
-        output_steps(example_steps[0...-1], :green)
-        output_steps(example_steps[-1..-1], :red)
+        output_steps(example_steps[0...-1], :success_color)
+        output_steps(example_steps[-1..-1], :failure_color)
       else
         output.puts red(message)
       end
