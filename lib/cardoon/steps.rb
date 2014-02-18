@@ -24,7 +24,7 @@ module Cardoon
         output.puts message
         output_steps(example_steps, :success_color)
       else
-        output.puts green(message)
+        output.puts success_color(message)
       end
     end
 
