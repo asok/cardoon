@@ -37,7 +37,7 @@ module Cardoon
         output_steps(example_steps[0...-1], :success_color)
         output_steps(example_steps[-1..-1], :failure_color)
       else
-        output.puts red(message)
+        output.puts failure_color(message)
       end
     end
 
